@@ -41,7 +41,7 @@ class _HomeTabState extends State<HomeTab> {
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "Qamar Maree",
+                  "Mohammad Maree",
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ],
@@ -119,7 +119,12 @@ class _HomeTabState extends State<HomeTab> {
                           return Tabeventwidget(
                               eventName: eventName,
                               isSelected: selectedIndex ==
-                                  eventsNameList.indexOf(eventName));
+                                  eventsNameList.indexOf(eventName),selectedColorr: AppColors.primaryLight
+                                  ,
+                                  selectedColore: AppColors.whiteColor,
+                                  bordorColor: AppColors.whiteColor,
+                                  bodyColore: AppColors.transparentColor,
+                                  bodyColorr:AppColors.whiteColor ,);
                         },
                       ).toList()),
                 ),

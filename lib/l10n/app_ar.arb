@@ -17,5 +17,16 @@
     "gaming": "الالعاب",
     "meeting": "مقابلات",
     "workshop": "ورشة عمل",
-    "eating":"طعام"
+    "eating":"طعام",
+    "search": "البحث عن الحدث",
+    "createevent": "إنشاء حدث",
+    "titles": "عنوان",
+    "eventtitles": "عنوان الحدث",
+    "eventdescription": "وصف الحدث",
+    "eventdate": "تاريخ الحدث",
+    "eventtime": "وقت الحدث",
+    "choosedate": "اختار التاريخ",
+    "choosetime":"اختار الوقت",
+    "chooselocation":"اختر موقع الحدث",
+    "addevent" : "اضافة حدث"
 }
