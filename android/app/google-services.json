@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "859939079491",
+    "project_id": "events-app-357bd",
+    "storage_bucket": "events-app-357bd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859939079491:android:54d9b60034acbd53f59bf6",
+        "android_client_info": {
+          "package_name": "com.example.tevent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxv74FcMNzoFduDMZdV3uit9sM3C1DaBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

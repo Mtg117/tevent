@@ -8,8 +8,14 @@ import 'package:tevent/feature/event/add_event_page.dart';
 import 'package:tevent/feature/home/home_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:tevent/feature/home/tabs/favorite_tab.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void>main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(

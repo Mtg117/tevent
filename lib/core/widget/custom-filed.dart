@@ -11,10 +11,11 @@ class CustomTextField extends StatelessWidget {
   final Widget? suffixIcon;
   final bool obscureText;
   final int? maxLines;
+  final TextEditingController? controller;
   
 
 
-  const CustomTextField({
+   CustomTextField({
     Key? key,
     required this.hintText,
     this.labelText,
@@ -25,6 +26,7 @@ class CustomTextField extends StatelessWidget {
     this.obscureText = false,
     this.maxLines = 1,
     this.color,
+    this.controller,
   });
 
   @override
@@ -41,6 +43,7 @@ class CustomTextField extends StatelessWidget {
             ),
           ),
         TextFormField(
+          controller: controller,
           obscureText: obscureText,
           maxLines: obscureText ? 1 : maxLines,
           decoration: InputDecoration(
