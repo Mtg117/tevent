@@ -43,6 +43,13 @@ void getFilterEvents(String filterEvents)async{
        
      });
   }
+  void deleteEvent(String eventId) async {
+  await FirebaseUtils.deleteEvent(eventId);
+  getAllEvents(); 
+  setState(() {
+    
+  });
+}
   
   @override
   void initState() {
@@ -172,6 +179,11 @@ void getFilterEvents(String filterEvents)async{
               itemBuilder: (context, index) {
                 return EventItemWidget(
                   event: eventsList[index],
+                  onUpdateFavorite: () {
+                    setState(() {
+                      
+                    });
+                  },
                 );
               },
             ),

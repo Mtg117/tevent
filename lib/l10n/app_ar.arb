@@ -28,5 +28,6 @@
     "choosedate": "اختار التاريخ",
     "choosetime":"اختار الوقت",
     "chooselocation":"اختر موقع الحدث",
-    "addevent" : "اضافة حدث"
+    "addevent" : "اضافة حدث",
+    "deleteEvent" : "تم حذف الحدث بنجاح"
 }

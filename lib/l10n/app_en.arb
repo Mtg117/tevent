@@ -28,5 +28,6 @@
     "choosedate": "Choose Date",
     "choosetime":"Choose Time",
     "chooselocation":"choose event location",
-    "addevent" : "Add Event"
+    "addevent" : "Add Event",
+    "deleteEvent" : "Event deleted successfully"
 }

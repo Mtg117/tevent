@@ -17,4 +17,11 @@ class FirebaseUtils {
    return docRef.set(event);
 
 }
+static Future<void> deleteEvent(String eventId) async {
+  await FirebaseFirestore.instance.collection(EventModel.collectionName).doc(eventId).delete();
+}
+  static Future<void> toggleFavorite(String eventId, bool isFavorite) async {
+    await getEventCollection().doc(eventId).update({'isFavorite': !isFavorite});
+  }
+
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tevent/core/utils/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
-   final Color? color;
+  final Color? color;
   final String hintText;
   final String? labelText;
   final TextStyle? hintStyle;
@@ -12,10 +12,10 @@ class CustomTextField extends StatelessWidget {
   final bool obscureText;
   final int? maxLines;
   final TextEditingController? controller;
-  
+  final String? Function(String?)? validator;
+  final TextInputType? keyboardType;
 
-
-   CustomTextField({
+  CustomTextField({
     Key? key,
     required this.hintText,
     this.labelText,
@@ -27,6 +27,8 @@ class CustomTextField extends StatelessWidget {
     this.maxLines = 1,
     this.color,
     this.controller,
+    this.validator,
+    this.keyboardType=TextInputType.text,
   });
 
   @override
@@ -46,6 +48,8 @@ class CustomTextField extends StatelessWidget {
           controller: controller,
           obscureText: obscureText,
           maxLines: obscureText ? 1 : maxLines,
+          validator: validator,
+          keyboardType:keyboardType ,
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: hintStyle ?? TextStyle(color: AppColors.greyColor),
@@ -53,7 +57,8 @@ class CustomTextField extends StatelessWidget {
             suffixIcon: suffixIcon,
             filled: true,
             fillColor: color ?? AppColors.whiteColor,
-            contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide(color: AppColors.whiteColor),
@@ -64,7 +69,8 @@ class CustomTextField extends StatelessWidget {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: const BorderSide(color: AppColors.primaryLight, width: 2),
+              borderSide:
+                  const BorderSide(color: AppColors.primaryLight, width: 2),
             ),
           ),
         ),
